@@ -14,6 +14,8 @@ void $file_name() {\n\
 \n\
 #endif // !_${define}_"
 
+[ ! -d "./build" ] && mkdir "./src/extends"
+
 echo $code > src/extends/$file_name.cpp
 
 echo "#include \"./extends/$file_name.cpp\"" | pbcopy &&
